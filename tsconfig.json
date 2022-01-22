@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
+    "target": "es2016",
+    "module": "umd",
     "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "jsx": "react",
-    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true
-  }
+  },
 }
