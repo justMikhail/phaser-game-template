@@ -1,37 +1,50 @@
 {
-  "name": "phaser-game-template",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "name": "phaser-project-template",
+  "version": "3.55.2",
+  "description": "Phaser 3 template (TypeScript, Webpack, Eslint).",
+  "homepage": "https://github.com/justMikhail/phaser-game-template",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --config ./webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --config webpack/webpack.dev.js",
+    "build": "rimraf dist && webpack --config webpack/webpack.prod.js",
+    "bundle": "npm run build",
+    "serve": "serve dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/justMikhail/phaser-game-template.git"
+  "keywords": [
+    "Phaser 3",
+    "Phaser3",
+    "html5 game",
+    "TypeScript",
+    "webpack"
+  ],
+  "author": {
+    "name": "Sitnikov Mikhail",
+    "url": "https://github.com/justMikhail"
   },
-  "author": "justMikhail",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/justMikhail/phaser-game-template/issues"
-  },
-  "homepage": "https://github.com/justMikhail/phaser-game-template#readme",
-  "devDependencies": {
-    "@types/lodash": "^4.14.178",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^16.1.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.5.1",
-    "ts-loader": "^9.2.6",
-    "typescript": "^4.5.5",
-    "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.1"
+  "engines": {
+    "node": ">=14"
   },
   "dependencies": {
     "phaser": "^3.55.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "copy-webpack-plugin": "^10.1.0",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "serve": "^13.0.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-merge": "^5.8.0",
+    "workbox-webpack-plugin": "^6.4.2"
   }
 }

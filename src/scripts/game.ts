@@ -1,7 +1,8 @@
 import 'phaser';
-console.log(Phaser);
-import MainScene from './script/scenes/mainScene';
-import PreloadScene from './script/scenes/preloadScene';
+import MainScene from './scenes/mainScene';
+import PreloadScene from './scenes/preloadScene';
+
+
 
 const DEFAULT_WIDTH = 1280;
 const DEFAULT_HEIGHT = 720;
@@ -20,13 +21,12 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      debug: true,
+      debug: false,
       gravity: { y: 400 },
     },
   },
 };
 
 window.addEventListener('load', () => {
-  console.log('load')
   const game = new Phaser.Game(config);
 });
